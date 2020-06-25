@@ -1,0 +1,56 @@
+[
+  {
+    "Name":"Onion",
+    "Image":"https://www.linkpicture.com/q/onion.jpg",
+    "Category":"Veggies",
+    "Unit Price":50,
+    "Unit": "kg",
+    "In Stock":true,
+    "Description":""
+  },
+  {
+    "Name":"Carrot",
+    "Image":"https://www.linkpicture.com/q/carrot_1.jpg",
+    "Category":"Veggies",
+    "Unit Price":30,
+    "Unit": "kg",
+    "In Stock":false,
+    "Description":""
+  },
+  {
+    "Name":"Capsicum",
+    "Image":"https://www.linkpicture.com/q/capsicum.jpg",
+    "Category":"Veggies",
+    "Unit Price":40,
+    "Unit": "kg",
+    "In Stock":true,
+    "Description":""
+  },
+  {
+    "Name":"Orange",
+    "Image":"https://www.linkpicture.com/q/orange.jpg",
+    "Category":"Fruits",
+    "Unit Price":100,
+    "Unit": "kg",
+    "In Stock":false,
+    "Description":""
+  },
+  {
+    "Name":"Banana",
+    "Image":"https://www.linkpicture.com/q/banana.jpg",
+    "Category":"Fruits",
+    "Unit Price":30,
+    "Unit": "kg",
+    "In Stock":false,
+    "Description":""
+  },
+  {
+    "Name":"Turmeric Powder 100g",
+    "Image":"https://linkpicture.com/q/turmeric.jpg",
+    "Category":"Spices",
+    "Unit Price":30,
+    "Unit": "packet",
+    "In Stock":true,
+    "Description":""
+  }
+]
