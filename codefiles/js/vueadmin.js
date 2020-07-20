@@ -34,7 +34,7 @@ var app = new Vue({
       var file = document.getElementById("csvdoc").files[0];
       const encoded_string = await getBase64(file);
 
-      url = 'https://api.github.com/repos/"username"/"repo_name"/contents/inventory.csv'
+      url = 'https://api.github.com/repos/wiosdesigns/flashcart4/contents/inventory.csv'
       
       var get = await fetch(url,{
       	method: 'GET',

@@ -7,13 +7,18 @@ let settings = {
   currency: '₹',
   shopphone: '919538065734',
   shopemail: 'None',
-  inventoryURL: 'https://docs.google.com/spreadsheets/d/1-nPhN7wEQCGwWpt1KI6yY0FzP1-dGLgK2HRFMdG2R7g/pubhtml'
+  inventoryURL: '/inventory.csv'
 };
 
-async function init(){
-  var response = await fetch("/inventory.json");
-  items = await response.json();
-  items_loaded();
+function init(){
+  Papa.parse(settings.inventoryURL, {
+	  download: true,
+	  header: true,
+	  complete: function(results) {
+		  items = results.data;
+		  items_loaded();
+	  }
+  });
 }
 
 
@@ -37,6 +42,7 @@ function items_loaded(){
     if(!categories.includes(items[i].Category)){
       categories.push(items[i].Category);
     }
+    items[i]['In Stock'] = items[i]['In Stock'].toLowerCase()=="yes";
     items[i].quantity = 0;
     items[i].match = true;
   }
