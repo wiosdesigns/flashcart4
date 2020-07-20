@@ -329,3 +329,16 @@ header{
 select{
   text-align: right;
 }
+
+
+.grid-container {
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: var(--theme);
+}
+
+.grid-item {
+  background-color: var(--bg2);
+  padding: 20px;
+  text-align: center;
+}

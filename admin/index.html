@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flashcart | Online Shop Template</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="description" content="The fastest shopping experience ever built. Presenting, FlashCart a template for your online ecommerce shop.">
+  
+  <meta property="og:title" content="Flashcart | Online Shop Template"/>
+  <meta property="og:url" content="https://flashcart.wiosdesigns.xyz/"/>
+  <meta property="og:description" content="The fastest shopping experience ever built. Presenting, FlashCart a template for your online ecommerce shop">
+  <meta property="og:image" content="/codefiles/assets/ogicon.png">
+  <meta property="og:type" content="website" />
+  
+  <meta name="twitter:card" content="app"></meta>
+  <meta property="twitter:image" content="/codefiles/assets/ogbg.png">
+  
+  
+  <link rel="shortcut icon" type="image/png" href="/codefiles/assets/icon.png"/>
+  <link rel="stylesheet" type="text/css" href="/codefiles/css/main.css"/>
+  <script src="/codefiles/js/vue.min.js"></script>
+</head>
+<body>
+  <div id="welcome">
+    <h1 style="color: var(--theme); border-bottom: 0.5mm solid var(--theme);">Welcome to the Admin Console</h1>
+    
+    <section id="gitlogin" v-if="showPopUp" style="padding-bottom: 0.5rem">
+      <h3>Enter your GitHub Access Token</h3>
+      <input v-model="token" placeholder="GitHub Access Token">
+    </section>
+
+
+    <section id="fileupload" v-if="showPopUp">
+      <h3>Upload your CSV File</h3>
+      <input type="file" v-model="csv" accept=".csv" id="csvdoc"><br><br>
+      <button v-on:click="upload()">Upload</button>
+    </section>
+  </div>
+  <script src="/codefiles/js/vueadmin.js"></script>
+</body>
+</html>
