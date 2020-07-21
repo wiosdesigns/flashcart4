@@ -1,0 +1,15 @@
+{
+  "name": "FlashCart",
+  "short_name": "FlashCart",
+  "display": "standalone",
+  "start_url": "/index.html",
+  "theme_color": "#04a777",
+  "background_color": "#1d201f",
+  "icons": [
+    {
+      "src": "/codefiles/assets/icon512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
