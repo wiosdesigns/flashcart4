@@ -1,4 +1,4 @@
-const version = "0.1";
+const version = "0.1.7";
 
 self.addEventListener('install', function(e) {
   e.waitUntil(
@@ -6,11 +6,11 @@ self.addEventListener('install', function(e) {
       return cache.addAll([
         '/',
         '/index.html',
-        '/codefiles/manifest.json',
+        '/manifest.json',
         '/codefiles/assets/hind.ttf',
         '/codefiles/assets/icon.png',
         '/codefiles/assets/icon512.png',
-        '/codefiles/assets/icons.tff',
+        '/codefiles/assets/icons.ttf',
         '/codefiles/assets/logotext.png',
         '/codefiles/assets/ogbg.png',
         '/codefiles/assets/ogicon.png',

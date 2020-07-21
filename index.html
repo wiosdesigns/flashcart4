@@ -4,6 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
   <meta name="description" content="The fastest shopping experience ever built. Presenting, FlashCart a template for your online ecommerce shop.">
+  <meta name="theme-color" content="#04a777"/>
   
   <meta property="og:title" content="Flashcart | Online Shop Template"/>
   <meta property="og:url" content="https://flashcart.wiosdesigns.xyz/"/>
@@ -20,10 +21,20 @@
   <script src="/codefiles/js/hnav.js"></script>
   <script src="/codefiles/js/papaparse.min.js"></script>
   
-  <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="apple-touch-icon" href="/codefiles/assets/apple-touch-icon.png">
   
   <script src="/codefiles/js/vue.min.js"></script>
   <script src="/codefiles/js/main.js"></script>
+  <script>
+    navigator.serviceWorker && navigator.serviceWorker.register('/sw.js').then(function(registration) {
+      registration.addEventListener('updatefound',function(){
+        caches.delete('the-magic-cache');
+        window.location.reload(true);
+      })
+      console.log('Excellent, registered with scope: ', registration.scope);
+    });
+  </script>
 </head>
 <body onload="init()">
 <div id="loading">

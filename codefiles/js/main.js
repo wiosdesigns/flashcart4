@@ -10,14 +10,12 @@ let settings = {
   inventoryURL: '/inventory.csv'
 };
 
+  
+
 function init(){
-  navigator.serviceWorker && navigator.serviceWorker.register('/codefiles/js/sw.js').then(function(registration) {
-    registration.addEventListener('updatefound',function(){
-      caches.delete('the-magic-cache');
-      window.location.reload(true);
-    })
-    console.log('Excellent, registered with scope: ', registration.scope);
-  });
+  
+  
+  
   
   Papa.parse(settings.inventoryURL, {
 	  download: true,
