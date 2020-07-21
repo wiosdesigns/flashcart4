@@ -43,17 +43,22 @@
   <section id="home" class="hnav" hnav:start>
     <h1 style="color: var(--theme); border-bottom: 0.5mm solid var(--theme);">Meet FlashCart</h1>
     <h3>
-      The fastest shopping experience ever built.  
+      Your own app for your own shop.  
     </h3>
     <h3>
-      Share your catalog and take orders via WhatsApp.
+      List your products and take orders via WhatsApp.
     </h3>
     <a href="#shop" class="btn">Try the demo</a>
     <br><br><br>
     <div class="grid-container">
       <div class="grid-item">
-        <a href="https://wa.me/919901297970?text=Hi%2C%20I%20am%20interested%20in&20Flashcart" class="btn"> 
-          WhatsApp For Setup
+        <a class="btn-icon" href="https://wa.me/919901297970?text=Hi%2C%20I%20am%20interested%20in&20Flashcart" class="btn"> 
+          <img src="/codefiles/assets/whatsapp.png">
+        </a>
+      </div>
+      <div class="grid-item">
+        <a class="btn-icon" href="tel:+919901297970" class="btn"> 
+          <img src="/codefiles/assets/phone.png">
         </a>
       </div>     
     </div>
@@ -132,23 +137,23 @@
       {{name}}
     </span>
     
-    <span class="price">{{$parent.settings.currency}}{{unitprice}}/{{unit}}</span>
+    <span class="price" style="grid-area: 2 / 1 / 3 / 2;">{{$parent.settings.currency}}{{unitprice}}/{{unit}}</span>
     
-    <div style="grid-area: 3 / 2 / 4 / 3;" v-if="instock && value<=0">
+    <div style="grid-area: 2 / 3 / 3 / 4; justify-self: end;" v-if="instock && value<=0">
       <button v-on:click="increment" class="addtocart" style="width: 100%; padding: 0.5mm 3mm; font-size: 80%;">Add to cart</button>
     </div>
-    <div style="grid-area: 3 / 2 / 4 / 3;" v-else-if="!instock">
-      <span style="grid-area: 3 / 2 / 4 / 3;" class="outofstock">Out of Stock</span>
+    <div style="grid-area: 2 / 3 / 3 / 4; justify-self: end;" v-else-if="!instock">
+      <span class="outofstock">Out of Stock</span>
     </div>
     
-    <div class="qctrl" v-else>
+    <div class="qctrl" style="grid-area: 2 / 3 / 3 / 4; justify-self: end;" v-else>
       <span class="icon" v-on:click="decrement">r</span>
       <span class="qty-display">{{value}}</span>
       <span class="icon" v-on:click="increment">a</span>
     </div>
     
     <span class="total" 
-      style="justify-self: right; padding-right: 5mm;" 
+      style="grid-area: 2 / 2 / 3 / 3; justify-self: start; padding-right: 5mm; color: var(--theme);" 
       v-if="value>0">
         {{$parent.settings.currency}}{{(value*unitprice).toFixed(2)}}
     </span>
