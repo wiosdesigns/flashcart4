@@ -166,6 +166,9 @@ header{
   border-bottom: 0.5mm solid var(--theme);
   color: var(--theme);
 }
+.qctrl .icon{
+  font-size: 160%;
+}
 .shopitem .total{
   grid-area: 3 / 3 / 4 / 4;
 }

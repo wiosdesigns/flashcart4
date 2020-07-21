@@ -1,4 +1,4 @@
-const version = "0.1.7";
+const version = "0.1.9";
 
 self.addEventListener('install', function(e) {
   e.waitUntil(
