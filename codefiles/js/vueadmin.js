@@ -57,8 +57,13 @@ var app = new Vue({
       	body: `{"message": "updating item list", "content": "${encoded_string}", "sha":"${sha}"}`
       });
 
+      if(response["status"]==200){
+        alert("Your file was successfully uploaded!");
+      }
+      else{
+        alert("Upload Error! Please try again.")
+      }
       console.log(response["status"]);
-      console.log(response);
 
 		}
 	}

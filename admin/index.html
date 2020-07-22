@@ -35,6 +35,11 @@
       <input type="file" v-model="csv" accept=".csv" id="csvdoc"><br><br>
       <button v-on:click="upload()">Upload</button>
     </section>
+
+    <section id="downloadsample" v-if="showPopUp" style="padding-top: 2rem;">
+      <!--<button onclick="window.location.href='/inventory.csv'" type="button">Download Sample CSV</button>-->
+      <a href="/inventory.csv">Download Sample CSV</a>
+    </section>
   </div>
   <script src="/codefiles/js/vueadmin.js"></script>
 </body>
